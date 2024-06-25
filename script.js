@@ -42,3 +42,15 @@ function restart(){
     stop();
     start();
 }
+
+function lap(){
+    if(timer){
+        var li = document.createElement("li");
+        li.innerText =  (m < 10 ? "0"+m : m) + ":" + (s < 10 ? "0"+s : s) + ":" + (ms < 10 ? "0"+ms : ms);
+        lapsContainer.appendChild(li);
+    }
+}
+
+function resetLaps(){
+    lapsContainer.innerHTML = "";
+}
